@@ -3,7 +3,8 @@ Spark Core Web App
 
 An amazing web based interface for your Spark Core.  It uses the power of Node.js, Express, Jade, Stylus for the backend, jQuery and AngularJS for the frontend, and the Spark API to let you remote control your own Spark Core.  Simply log into your device, and take control... from anywhere in the world! Fork us and make your own!  
 
-##Don't forget to Watch this repo for the many changes that will be coming in the future as the Spark API is further developed.
+####Don't forget to Watch this repo for the many changes that will be coming in the future as the Spark API is further developed.
+=
 
 ###Local Installation
 1. Fork this repo and clone it on your computer, or download the zip and unzip somewhere on your computer

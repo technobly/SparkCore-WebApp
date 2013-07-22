@@ -1,0 +1,213 @@
+extends layout
+
+block content
+  .animated_fast.bounceInDown
+    #wrapper(ng-controller='Ctrl1')
+      .animated_slow.fadeInDelayed
+        form(id='form2')
+          label(for='devicename') Device Name
+          input(type='text', name='deviceName', ng-model='deviceName', ng-change='deviceChanged()')
+        form(id='form1')
+          label(for='response') Last Response
+          textarea(type='text', cols='1', rows='3', wrap='off', name='response', ng-model='response')
+      #sparkcore
+        div
+          table(border='0', align='center')
+            tr(id='row_pad')
+              td 
+              td 
+              td(rowspan='14')
+                a(href='/')
+                  img(src='/images/spark-core-top.png')
+              td 
+              td
+            tr(id='row_pin')
+              td(id='row_button')
+              td(id='row_left', ng-click='digitalWrite("A7")') RAW
+              td(id='row_right') VCC
+              td(id='row_button') 
+            tr(id='row_pin')
+              td(id='row_button')
+              td(id='row_left') GND
+              td(id='row_right') RST
+              td(id='row_button')
+            tr(id='row_pin')
+              td(id='row_button')
+              td(id='row_left') TX
+              td(id='row_right') VDDA
+              td(id='row_button')
+            tr(id='row_pin')
+              td(id='row_button')
+              td(id='row_left') RX
+              td(id='row_right') GND
+              td(id='row_button')
+            tr(id='row_pin')
+              td(id='row_button')
+                .highlowswitch
+                  input#a7.highlowswitch-checkbox(type='checkbox', name='a7', ng-click='digitalWrite("A7")', ng-model='a7chkd')
+                  label.highlowswitch-label(for='a7')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+              td(id='row_left') A7
+              td(id='row_right') D7
+              td(id='row_button')
+                .highlowswitch
+                  input#d7.highlowswitch-checkbox(type='checkbox', name='d7', ng-click='digitalWrite("D7")', ng-model='d7chkd')
+                  label.highlowswitch-label(for='d7')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+            tr(id='row_pin')
+              td(id='row_button')
+                .highlowswitch
+                  input#a6.highlowswitch-checkbox(type='checkbox', name='a6', ng-click='digitalWrite("A6")', ng-model='a6chkd')
+                  label.highlowswitch-label(for='a6')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+              td(id='row_left') A6
+              td(id='row_right') D6
+              td(id='row_button')
+                .highlowswitch
+                  input#d6.highlowswitch-checkbox(type='checkbox', name='d6', ng-click='digitalWrite("D6")', ng-model='d6chkd')
+                  label.highlowswitch-label(for='d6')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+            tr(id='row_pin')
+              td(id='row_button')
+                .highlowswitch
+                  input#a5.highlowswitch-checkbox(type='checkbox', name='a5', ng-click='digitalWrite("A5")', ng-model='a5chkd')
+                  label.highlowswitch-label(for='a5')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+              td(id='row_left') A5
+              td(id='row_right') D5
+              td(id='row_button')
+                .highlowswitch
+                  input#d5.highlowswitch-checkbox(type='checkbox', name='d5', ng-click='digitalWrite("D5")', ng-model='d5chkd')
+                  label.highlowswitch-label(for='d5')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+            tr(id='row_pin')
+              td(id='row_button')
+                .highlowswitch
+                  input#a4.highlowswitch-checkbox(type='checkbox', name='a4', ng-click='digitalWrite("A4")', ng-model='a4chkd')
+                  label.highlowswitch-label(for='a4')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+              td(id='row_left') A4
+              td(id='row_right') D4
+              td(id='row_button')
+                .highlowswitch
+                  input#d4.highlowswitch-checkbox(type='checkbox', name='d4', ng-click='digitalWrite("D4")', ng-model='d4chkd')
+                  label.highlowswitch-label(for='d4')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+            tr(id='row_pin')
+              td(id='row_button')
+                .highlowswitch
+                  input#a3.highlowswitch-checkbox(type='checkbox', name='a3', ng-click='digitalWrite("A3")', ng-model='a3chkd')
+                  label.highlowswitch-label(for='a3')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+              td(id='row_left') A3
+              td(id='row_right') D3
+              td(id='row_button')
+                .highlowswitch
+                  input#d3.highlowswitch-checkbox(type='checkbox', name='d3', ng-click='digitalWrite("D3")', ng-model='d3chkd')
+                  label.highlowswitch-label(for='d3')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+            tr(id='row_pin')
+              td(id='row_button')
+                .highlowswitch
+                  input#a2.highlowswitch-checkbox(type='checkbox', name='a2', ng-click='digitalWrite("A2")', ng-model='a2chkd')
+                  label.highlowswitch-label(for='a2')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+              td(id='row_left') A2
+              td(id='row_right') D2
+              td(id='row_button')
+                .highlowswitch
+                  input#d2.highlowswitch-checkbox(type='checkbox', name='d2', ng-click='digitalWrite("D2")', ng-model='d2chkd')
+                  label.highlowswitch-label(for='d2')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+            tr(id='row_pin')
+              td(id='row_button')
+                .highlowswitch
+                  input#a1.highlowswitch-checkbox(type='checkbox', name='a1', ng-click='digitalWrite("A1")', ng-model='a1chkd')
+                  label.highlowswitch-label(for='a1')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+              td(id='row_left') A1
+              td(id='row_right') D1
+              td(id='row_button')
+                .highlowswitch
+                  input#d1.highlowswitch-checkbox(type='checkbox', name='d1', ng-click='digitalWrite("D1")', ng-model='d1chkd')
+                  label.highlowswitch-label(for='d1')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+            tr(id='row_pin')
+              td(id='row_button')
+                .highlowswitch
+                  input#a0.highlowswitch-checkbox(type='checkbox', name='a0', ng-click='digitalWrite("A0")', ng-model='a0chkd')
+                  label.highlowswitch-label(for='a0')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+              td(id='row_left') A0
+              td(id='row_right') D0
+              td(id='row_button')
+                .highlowswitch
+                  input#d0.highlowswitch-checkbox(type='checkbox', name='d0', ng-click='digitalWrite("D0")', ng-model='d0chkd')
+                  label.highlowswitch-label(for='d0')
+                    .highlowswitch-inner
+                    .highlowswitch-switch
+            tr(id='row_pin')
+              td 
+              td 
+              td 
+              td 
+            tr(id='row_pin')
+              td 
+              td 
+              td 
+              td(id='row_right') 
+              td(id='row_lock') Locked
+                .onoffswitch
+                  input#lock.onoffswitch-checkbox(type='checkbox', name='lock')
+                  label.onoffswitch-label(for='lock')
+                    .onoffswitch-inner
+                    .onoffswitch-switch
+      p
+      #logo
+        a(href='http://www.sparkdevices.com')
+          img(width='280px',height='auto',src='/images/spark-white.png')
+      #text1
+        | Spark Core - Node.js Web App
+      include footer
+  //script(type='text/javascript', src='js/lib/angular/angular.js')
+  script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js')
+  script(type='text/javascript', src='js/app.js')
+  script(type='text/javascript', src='js/services.js')
+  script(type='text/javascript', src='js/controllers.js')
+  script(type='text/javascript', src='js/filters.js')
+  script(type='text/javascript', src='js/directives.js')
+  script
+    $('document').ready(function() {
+      setTimeout(function(){
+        $('div#wrapper').parent().removeClass();
+        $('div#footer').parent().removeClass();
+      },1000);
+      $('#lock').click(function() {
+        locked(($('#lock').is(':checked')));
+      });
+      
+      function locked(en) {
+        var el;
+        for (var x = 0; x < 8; x++) {
+            el = eval("\$\(\"\#\d" + x + "\"\)");
+            el.prop('disabled', en);
+            el = eval("\$\(\"\#\a" + x + "\"\)");
+            el.prop('disabled', en);
+        }
+      }
+    });

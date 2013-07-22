@@ -1,0 +1,25 @@
+{
+  "name": "sparkcore",
+  "version": "0.0.1",
+  "preferGlobal": true,
+  "author": "DubbyTT <dubbytt@gmail.com>",
+  "description": "Spark Core Web App - An amazing web based interface for your Spark Core.  It uses the power of Node.js, Express, Jade, Stylus for the backend, jQuery and AngularJS for the frontend, and the Spark API to let you remote control your own Spark Core.  Simply log into your device, and take control... from anywhere in the world! Fork us on Github.com and make your own!",
+  "private": true,
+  "contributors": [ 
+    {
+      "name": "DubbyTT",
+      "email": "dubbytt@gmail.com"
+    } 
+  ],
+  "dependencies": {
+    "express": "3.3.x",
+    "jade": "*",
+    "stylus": "*",
+    "nodetime": "*"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}

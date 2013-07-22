@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .animated_fast.fadeInNow
+    #wrapper
+      #logo2
+        a(href='/')
+          img(src='/images/bdub_logo.png')
+      #display
+        p!= content
+      
+      include footer

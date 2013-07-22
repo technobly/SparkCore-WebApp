@@ -18,3 +18,7 @@ An amazing web based interface for your Spark Core.  It uses the power of Node.j
 1. Follow this guide here: https://devcenter.heroku.com/articles/quickstart
 2. Under step #4, click on Get Started with... Node.js
 3. More step by step instructions are coming
+
+=
+###Live Demo
+http://sparkcore.herokuapp.com

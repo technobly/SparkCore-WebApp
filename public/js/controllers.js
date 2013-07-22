@@ -38,15 +38,10 @@ angular.module('myApp.controllers', []).
       var level = eval("\$scope\." + lowerpin + "chkd");
       if(level) level = "HIGH";
       else level = "LOW";
-      console.log("Ctrl1:"+pin+":"+level+"https://api.sprk.io/v1/devices/"+$rootScope.deviceName);
-      $http({
-        url: "https://api.sprk.io/v1/devices/"+$rootScope.deviceName,
-        method: "POST",
-        data: "pin="+pin+"&level="+level,
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      }).success(function(response, status, headers, config) {  
+      //console.log("Ctrl1:"+pin+":"+level+"https://api.sprk.io/v1/devices/"+$rootScope.deviceName);
+      $http.post("https://api.sprk.io/v1/devices/"+$rootScope.deviceName,
+        { "pin": pin, "level": level } // JSON Data
+      ).success(function(response, status, headers, config) {  
         if(response.ok === true) {
           if($scope.response == "Success!")
             $scope.response = "Success! :)";
@@ -62,7 +57,7 @@ angular.module('myApp.controllers', []).
             $scope.response = temp;
           $scope.error = response.errors;
         }
-        console.log(JSON.stringify(response, null, ' '));
+        //console.log(JSON.stringify(response, null, ' '));
       }).error(function(response, status, headers, config) {
         if(response.ok === false) {
           $scope.response = JSON.stringify(response.errors);

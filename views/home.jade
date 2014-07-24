@@ -191,23 +191,18 @@ block content
   script(type='text/javascript', src='js/controllers.js')
   script(type='text/javascript', src='js/filters.js')
   script(type='text/javascript', src='js/directives.js')
-  script
-    $('document').ready(function() {
-      setTimeout(function(){
-        $('div#wrapper').parent().removeClass();
-        $('div#footer').parent().removeClass();
-      },1000);
-      $('#lock').click(function() {
-        locked(($('#lock').is(':checked')));
-      });
-      
-      function locked(en) {
-        var el;
-        for (var x = 0; x < 8; x++) {
-            el = eval("\$\(\"\#\d" + x + "\"\)");
-            el.prop('disabled', en);
-            el = eval("\$\(\"\#\a" + x + "\"\)");
-            el.prop('disabled', en);
-        }
-      }
-    });
+  script(type='text/javascript').
+    $('document').ready(function()
+      setTimeout(function() {
+        $('div#wrapper').parent().removeClass()
+        $('div#footer').parent().removeClass()
+      },1000)
+      $('#lock').click(function()
+        locked(($('#lock').is(':checked')))
+      function locked(en)
+        var el
+        for (var x = 0; x < 8; x++)
+          el = eval("\$\(\"\#\d" + x + "\"\)")
+          el.prop('disabled', en)
+          el = eval("\$\(\"\#\a" + x + "\"\)")
+          el.prop('disabled', en)
